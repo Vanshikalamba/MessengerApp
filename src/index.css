@@ -1,13 +1,27 @@
 .App {
   display: flex;
+  justify-content: center;
+  margin: auto;
 }
-
 .chatList {
   width: 25%;
   height: 90vh;
+  border-radius: 10px 0px 0px 10px;
 
-  padding: 10px;
-  border: 2px black solid;
+  border: 1px gray solid;
+  background: black;
+  color: white;
+}
+
+.title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.defaultChat {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
 }
 
 .chatBox {
@@ -16,11 +30,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 90vh;
-  padding: 10px;
-  border: 2px black solid;
+  padding-top-: 10px;
+  border: 1px gray white;
+  border-radius: 0px 10px 10px 0px;
+  background: black;
+  color: white;
 }
 .chatData {
-  padding: 5px;
+  padding: 10px;
 }
 .inputField {
   display: flex;
@@ -29,30 +46,45 @@
   justify-content: space-between;
 }
 
-.contactField {
+.contactfield {
   font-size: 20px;
-  background-color: #f1f1f1;
   padding: 8px;
-  margin: 10px;
+  margin-bottom: 10px;
+  background-color: #141414;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  padding-left: 20%;
+}
+
+.contactfield:hover {
+  background-color: #403f3f;
+}
+
+.prevmsg {
+  margin-top: 5px;
+  font-size: 10px;
+}
+.contactOpen {
+  font-size: 20px;
+  background-color: wheat;
+  color: black;
+  font-weight: bold;
+  padding: 8px;
+  margin: 5px;
+  width: 20%;
   text-align: center;
   border: 2px gray solid;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.contactfield: active {
-  background-color: gray;
-}
-.contactOpen {
-  font-size: 20px;
-  background-color: #f1f1f1;
+.contactLogo {
   padding: 8px;
-  margin: 5px;
-  width: 30%;
-  text-align: center;
-  border: 2px gray solid;
-  border-radius: 10px;
-  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 80%;
+  border: 3px gray solid;
 }
 
 .inputtext {
@@ -67,25 +99,54 @@
   border-bottom: 1px solid black;
 }
 
+.toggleBtn {
+  display: none;
+}
+
 .messageText {
-  maxwidth: 60%;
-  width: 50%;
-  padding: 10px;
+  max-width: 60%;
+
+  padding: 15px;
   margin-bottom: 10px;
   border-radius: 15px;
-
-  display: flex;
-  flex-direction: end;
-
-  background-color: #0078d7;
+  display: inline-block;
+  align-self: flex-end;
+  width: fit-content;
+  white-space: nowrap;
+  background-color: #8d42f5;
   color: #fff;
-  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+.Messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .SendBtn {
   cursor: pointer;
   background-color: blue;
-  padding: 15px;
+  padding: 12px 10px 12px 10px;
+  font-weight: bold;
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .title h4 {
+    font-size: 14px;
+  }
+
+  .contactOpen {
+    font-size: 14px;
+  }
+  .chatList {
+    width: 40%;
+  }
+
+  .chatBox {
+    width: 60%;
+  }
 }

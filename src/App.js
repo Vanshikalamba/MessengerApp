@@ -9,6 +9,8 @@ function App() {
     { id: 1, name: "Karan" },
     { id: 2, name: "Ram" },
     { id: 3, name: "Robin" },
+    { id: 4, name: "Reeta" },
+    { id: 5, name: "Kavita" },
   ];
   const [msgData, setMsgData] = useState([]);
 

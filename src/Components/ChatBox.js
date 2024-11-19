@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SentMessage from "./SentMessage";
+import DefaultChatBox from "./DefaultChatBox";
 
 function ChatBox({ openedContact, msgData, setMsgData }) {
   const [msgText, setMsgText] = useState("");
@@ -9,7 +10,12 @@ function ChatBox({ openedContact, msgData, setMsgData }) {
       setMsgText("");
     }
   };
-  if (openedContact === null) return <div>Please Select a Contact</div>;
+  if (openedContact === null)
+    return (
+      <div className="chatBox">
+        <DefaultChatBox />
+      </div>
+    );
   return (
     <div className="chatBox">
       <div className="chatData">

@@ -1,13 +1,17 @@
 import React from "react";
+import ContactName from "./ContactName";
 
 function ChatList({ contactList, onOpen }) {
   return (
     <div className="chatList">
-      {contactList.map((item) => (
-        <div className="contactField" onClick={() => onOpen(item)}>
-          {item.name}
-        </div>
-      ))}
+      <div className="title">
+        <h4>Messenger</h4>
+      </div>
+      <div className="listContact">
+        {contactList.map((item) => (
+          <ContactName onOpen={onOpen} item={item} />
+        ))}
+      </div>
     </div>
   );
 }
